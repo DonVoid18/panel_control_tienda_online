@@ -1,0 +1,58 @@
+:root{
+    --color-primario:#ffffff;
+    --color-secundario: #e5f1fdb7;
+    --color-tercero: #0284fe;
+    --color-border: #dedede;
+    --size-container-menu: 12%;
+    --border-radius-principal: 5px;
+    --padding-containers-principales: 5px;
+}
+.container_bloque_informacion{
+    width: 100%;
+    border-radius: var(--border-radius-principal);
+    background-color: var(--color-primario);
+    padding: var(--padding-containers-principales);
+    margin: 10px;
+}
+.container_add_new_products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container_inputs_new_products{
+    width: 50%;
+    min-width: 200px;
+}
+.input_add_product{
+    padding: 5px 0;
+}
+.input_object_add_product{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-principal);
+    font-family: 'Open Sans', sans-serif;
+}
+/* css de los botones de confirmar producto*/
+.boton_add_product{
+    width: 49.5%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-principal);
+    cursor: pointer;
+    transition: 0.1s ease;
+    margin: 5px 0;
+}
+.boton_add_product:active{
+    transform: scale(0.9,0.9);
+}
+.container_input_imagen_product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+.container_input_imagen_product img{
+    width: 150px;
+}

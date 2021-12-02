@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-secundario);
+    width: 100%;
+}
+:root{
+    --color-primario:#ffffff;
+    --color-secundario: #e5f1fdb7;
+    --color-tercero: #0284fe;
+    --color-border: #dedede;
+    --size-container-menu: 12%;
+    --border-radius-principal: 5px;
+}
+.container_panel_control{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+}
+.container_panel_control_menu{
+    width: var(--size-container-menu);
+    min-width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primario);
+    box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.103);
+    position: relative;
+    transition: 0.2s ease;
+}
+/* css del boton acordeon */
+.boton_menu_togle{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    text-align: right;
+    right: 0;
+    top: 50%;
+    clip-path: circle(50% at 94% 50%);
+    padding-right: 2px;
+    color: var(--color-tercero);
+}
+.container_botones_seccion_panel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.container_botones_seccion_panel::-webkit-scrollbar{
+    width: 3px;
+}
+.container_botones_seccion_panel::-webkit-scrollbar-thumb{
+    background-color: var(--color-tercero);
+}
+/* css del container imagen */
+.container_logo_panel_menu{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+.container_logo_panel_menu img{
+    width: 80%;
+}
+/* css de la seccion de botones */
+.seccion_menu_control{
+    text-align: center;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: 0.3s linear;
+    border-bottom: 1px solid var(--color-border);
+}
+.seccion_menu_control_text{
+    display: block;
+}
+.seccion_menu_control i{
+    font-size: 20px;
+    color: var(--color-tercero);
+}
+.seccion_menu_control:hover{
+    background: var(--color-secundario);
+}
+/* css de la información principal del usuario */
+.container_panel_control_principal{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+/* css de la seccion de notificaciones y ver perfil del admin */
+.container_notify_panel{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.container_botones_notify_panel{
+    min-width: 222px;
+    height: 35px;
+    line-height: 35px;
+    background-color: var(--color-primario);
+    border-radius: var(--border-radius-principal);
+    margin-right: 20px;
+    padding: 0 10px;
+}
+.boton_notify{
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin: 0 5px;
+    position: relative;
+}
+.boton_notify:hover .tooltiptext{
+    visibility: visible;
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 85px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: var(--border-radius-principal);
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    top: 180%;
+    left: 50%;
+    margin-left: -47px;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+/* colores fijos de los iconos */
+.boton_notify > i{
+    padding: 0 2px;
+}
+.fa-power-off{
+    color: red;
+}
+.fa-bell{
+    color: #FCBB45;
+}
+/* css de container principal que tendrá toda la información */
+.container_panel_control_principal_informacion{
+    width: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+.container_panel_control_principal_informacion::-webkit-scrollbar{
+    width: 3px;
+}
+.container_panel_control_principal_informacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-tercero);
+}
+.activo_boton_ocultar_menu{
+    width: 80px;
+    min-width: 75px;
+}
+#boton_cerrado{
+    display: none;
+}

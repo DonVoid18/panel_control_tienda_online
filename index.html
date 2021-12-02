@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Open+Sans:wght@500&family=Roboto:wght@300&family=Rubik:ital,wght@0,400;1,300&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Open+Sans:wght@500&family=Roboto:wght@300&family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilo_productos.css">
+</head>
+<body>
+    <div class="container_panel_control">
+        <div class="container_panel_control_menu">
+            <div class="container_logo_panel_menu">
+                <img src="imagenes/logo_pagina_principal.png" alt="Logo del menú">
+            </div>
+            <div class="container_botones_seccion_panel">
+                <button class="seccion_menu_control">
+                    <i class="fas fa-users"></i>
+                    <span class="seccion_menu_control_text">
+                        Clientes
+                    </span>
+                </button>
+                <button class="seccion_menu_control">
+                    <i class="fas fa-users"></i>
+                    <span class="seccion_menu_control_text">
+                        Ordenes
+                    </span>
+                </button>
+                <button class="seccion_menu_control">
+                    <i class="fas fa-angle-double-left"></i>
+                    <span class="seccion_menu_control_text">
+                        Clientes
+                    </span>
+                </button>
+            </div>
+            <button class="boton_menu_togle">
+                <i id="boton_abierto" class="fas fa-angle-double-left"></i>
+                <i id="boton_cerrado" class="fas fa-angle-double-right"></i>
+            </button>
+        </div>
+        <div class="container_panel_control_principal">
+            <div class="container_notify_panel">
+                <div class="container_botones_notify_panel">
+                    <button class="boton_notify">
+                        <i class="fas fa-user-tie"></i>
+                        Angelo Patrick
+                        <span class="tooltiptext">Cuenta de usuario</span>
+                    </button>
+                    <button class="boton_notify">
+                        <i class="fas fa-bell"></i>
+                        <span class="tooltiptext">Actividad del panel</span>
+                    </button>
+                    <button class="boton_notify">
+                        <i class="fas fa-power-off"></i>
+                        <span class="tooltiptext">Cerrar sesión</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container_panel_control_principal_informacion">
+                <div class="container_bloque_informacion">
+                    <div class="container_bloque_informacion_titulo">
+                        <h3>Agregar nuevo producto</h3>
+                    </div>
+                    <div class="container_add_new_products">
+                        <div class="container_inputs_new_products">
+                            <div class="input_add_product">
+                                <input type="text" class="input_object_add_product" placeholder="Marca del producto">
+                            </div>
+                            <div class="input_add_product">
+                                <input type="text" class="input_object_add_product" placeholder="Descripción del producto">
+                            </div>
+                            <div class="input_add_product">
+                                <input type="number" class="input_object_add_product" placeholder="Cantidad" min="0">
+                            </div>
+                            <div class="input_add_product">
+                                <select name="" id="" class="input_object_add_product">
+                                    <option value="">Gaming</option>
+                                    <option value="">Televisores</option>
+                                    <option value="">Celulares</option>
+                                </select>
+                            </div>
+                            <div class="input_add_product">
+                                <input type="number" class="input_object_add_product" placeholder="Precio del producto (S/.)" min="0">
+                            </div>
+                            <div class="input_add_product">
+                                <input type="number" class="input_object_add_product" placeholder="Descuento del producto (%)" min="0">
+                            </div>
+                            <div class="input_add_product">
+                                <button class="boton_add_product">Limpiar Campos</button>
+                                <button class="boton_add_product">Guardar producto</button>
+                            </div>
+                        </div>
+                        <div class="container_input_imagen_product">
+                            <img src="imagenes/producto-sin-imagen.png" alt="Imagen del producto">
+                            <input type="file">
+                        </div>
+                    </div>
+                </div>
+                <div class="container_bloque_informacion">
+                    <div class="container_bloque_informacion_titulo">
+                        <h3>Detalles</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="codigo/boton_ocultar.js"></script>
+    <script src="https://kit.fontawesome.com/71a4b48035.js" crossorigin="anonymous"></script>
+</body>
+</html>
