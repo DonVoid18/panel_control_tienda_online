@@ -1,0 +1,38 @@
+$('#registrarme').on("click", function(){
+$('#c1').addClass('move');
+$("#c2").removeClass("move2");
+});
+
+$("#iniciar").on("click", function () {
+  $("#c1").removeClass("move");
+  $("#c2").addClass("move2");
+});
+
+
+$('.menu-btn').on('click', function(){
+	$(this).toggleClass('close-btn')
+  $('aside').toggleClass('show-aside')
+})
+
+
+$('.upload input').on('change', function(e) {
+	var filename = e.target.files[0].name;
+	$(this).parent().find('label').html(filename);
+  $(this).parent().toggleClass('checked');
+});
+
+$('.profile-option').on('click', function(){
+  $('.menu').toggleClass('show-menu')
+})
+
+
+// modal function
+
+$('.modal-btn').on("click", function(){
+  var modal = $(this).attr('data-buttonmodal');
+  $('[data-modal="'+ modal + '"]').addClass('show-modal')
+});
+
+$('.close-modal').on('click', function(){
+  $(this).parent().parent().parent().parent().removeClass('show-modal')
+})
