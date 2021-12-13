@@ -27,7 +27,6 @@ include("Conexiones/conexion.php")
                             <span>Tablas de Base datos</span>
                         </a>
                     </div>
-                    
                     <div class="link">
                         <a href="./productos.php">
                             <img src="icons/productos.png"></img>
@@ -76,7 +75,6 @@ include("Conexiones/conexion.php")
             </aside>
             <div class="page-content">
                 <div class="header">
-                    
                     <div class="global-stats">
                         <div class="stat-item">
                             <img src="./Certisaas _ Dashboard_files/logos/producto.png" alt="">
@@ -162,7 +160,6 @@ include("Conexiones/conexion.php")
                                 </button>
                             </div>
                         </div>
-                        
                     </div>
                     <?php
                     $query = "SELECT * FROM `pedido`";
@@ -175,7 +172,7 @@ include("Conexiones/conexion.php")
                                     <th><div class="cs-field"><input type="checkbox" onclick="marcar(this)"></div></th>
                                     <th>Id usuario</th>
                                     <th>Fecha</th>
-                                    <th>Monto Total</th>
+                                    <th>Monto Total S/.</th>
                                     <th>Direccion</th>
                                     <th>Departamento</th>
                                     <th class="sm-col">Opciones</th>

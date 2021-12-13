@@ -12,48 +12,8 @@ include("Conexiones/conexion.php")
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="./Certisaas _ Dashboard_files/css2" rel="stylesheet">
     <script src="js/control_poc.js"></script>
-    <script>
-        (function (global) {
-            if(typeof (global) === "undefined") {
-                throw new Error("window is undefined");
-            }
-
-            var _hash = "!";
-            var noBackPlease = function () {
-                global.location.href += "#";
-
-                // making sure we have the fruit available for juice (^__^)
-                global.setTimeout(function () {
-                    global.location.href += "!";
-                }, 50);
-            };
-
-            global.onhashchange = function () {
-                if (global.location.hash !== _hash) {
-                    global.location.hash = _hash;
-                }
-            };
-
-            global.onload = function () {
-                noBackPlease();
-
-                // disables backspace on page except on input fields and textarea..
-                document.body.onkeydown = function (e) {
-                    var elm = e.target.nodeName.toLowerCase();
-                    if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
-                        e.preventDefault();
-                    }
-                    // stopping event bubbling up the DOM tree..
-                    e.stopPropagation();
-                };
-            }
-
-        })(window);
-    </script>
     <?php
     if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["cerrar_sesion_panel_principal"])){
-        session_start();
-        session_destroy();
         header("Location: ./../Tienda_Online_Rios/index.php");
     }
     ?>

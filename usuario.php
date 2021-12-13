@@ -5,7 +5,6 @@ include("Conexiones/conexion.php")
 <!DOCTYPE html>
 <!-- saved from url=(0123)https://intuitionagencia.com/certisaas/dashboard.html?fbclid=IwAR2QrGtPtHRvqArbAJP88-VrOTHjp5VPf7ntAvw3Z3Ye07AhLirNqzQAGGw# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certisaas | Dashboard</title>
@@ -27,7 +26,6 @@ include("Conexiones/conexion.php")
                             <span>Tablas de Base datos</span>
                         </a>
                     </div>
-                    
                     <div class="link" class="link">
                         <a href="./productos.php">
                             <img src="icons/productos.png"></img>
@@ -87,13 +85,11 @@ include("Conexiones/conexion.php")
                                 </select>
                             </div>
                         </div>
-                        
                     </div>
-                    
                     <div class="global-stats">
                         <div class="stat-item">
                             <img src="./Certisaas _ Dashboard_files/logos/producto.png" alt="">
-                            <div>   
+                            <div>
                                 <h5>Productos vendidos</h5>
                                 <span>140 - Hoy</span>
                             </div>
@@ -136,7 +132,7 @@ include("Conexiones/conexion.php")
                                 </button>
                             </a>
                             <a href="" class="link">
-                                Salir 
+                                Salir
                                 <button class="link">
                                     <img src="icons/salida.png" style="width:1.9em"></img>
                                 </button>
@@ -148,22 +144,6 @@ include("Conexiones/conexion.php")
                     <div class="">
                         <h4 class="page-title">Tabla de Usuarios</h4>
                         <div class="content-header">
-                            <div class="table-filter">
-                                <div class="cs-field select">
-                                    <label for="">Tipo de Usuario</label>
-                                    <div class="select-contianer">
-                                        <select name="" id="">
-                                            <option value="">...</option>
-                                            <option value="">Nombre</option>
-                                            <option value="">Apellido</option>
-                                            <option value="">DNI</option>
-                                            <option value="">Celular</option>
-                                            <option value="">Email</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button class="cs-btn btn-blue sm-btn">Filtrar</button>
-                            </div>
                             <div class="table-masive-actions">
                                 <form action="https://intuitionagencia.com/certisaas/dashboard.html?fbclid=IwAR2QrGtPtHRvqArbAJP88-VrOTHjp5VPf7ntAvw3Z3Ye07AhLirNqzQAGGw" class="search-data-form">
                                     <button class="search-btn" class="link">
@@ -179,7 +159,6 @@ include("Conexiones/conexion.php")
                                 </button>
                             </div>
                         </div>
-                        
                     </div>
                     <?php
                     $query = "SELECT * FROM `usuarios`";
@@ -200,12 +179,18 @@ include("Conexiones/conexion.php")
                                     <th>Celular</th>
                                     <th>Email</th>
                                     <th>Password</th>
-                                    <th class="sm-col">Opciones</th>
+                                    <th>Tipo</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                while ($row = $result->fetch_assoc()) { 
+                                $tipo_usuario;
+                                while ($row = $result->fetch_assoc()) {
+                                    if($row["rango"] === "1"){
+                                        $tipo_usuario = "Administrador";
+                                    }else{
+                                        $tipo_usuario = "Cliente";
+                                    }
                                     echo '
                                     <tr>
                                         <td><div class="cs-field"><input type="checkbox"></div></td>
@@ -223,16 +208,7 @@ include("Conexiones/conexion.php")
                                         <td>'.$row['celular'].'</td>
                                         <td>'.$row['email'].'</td>
                                         <td>'.$row['password'].'</td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="icon-btn">
-                                                    <img src="icons/editar.png" style="width:1em"></img>
-                                                </button>
-                                                <button class="icon-btn">
-                                                    <img src="icons/basura.png" style="width:1em"></img>
-                                                </button>
-                                            </div>
-                                        </td>
+                                        <td>'.$tipo_usuario.'</td>
                                     </tr> 
                                     ';
                                 }
@@ -240,16 +216,10 @@ include("Conexiones/conexion.php")
                             </tbody>
                         </table>
                     </div>
-                    <div class="center-vertical justify-content-between">
-                        <p class="mb-0">250 elementos</p>                                
-                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
     <script type="text/javascript" src="./Certisaas _ Dashboard_files/jquery-3.6.0.min.js.descarga"></script>
     <script src="./Certisaas _ Dashboard_files/custom.js.descarga"></script>
-  
   </body></html>
- 

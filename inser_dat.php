@@ -5,7 +5,6 @@ include("Conexiones/conexion.php")
 <!DOCTYPE html>
 <!-- saved from url=(0123)https://intuitionagencia.com/certisaas/dashboard.html?fbclid=IwAR2QrGtPtHRvqArbAJP88-VrOTHjp5VPf7ntAvw3Z3Ye07AhLirNqzQAGGw# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certisaas | Dashboard</title>
@@ -13,7 +12,6 @@ include("Conexiones/conexion.php")
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="./Certisaas _ Dashboard_files/css2" rel="stylesheet">
-    
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>tinymce.init({selector:'textarea'});</script>
 </head>
@@ -29,7 +27,6 @@ include("Conexiones/conexion.php")
                             <span>Tablas de Base datos</span>
                         </a>
                     </div>
-                    
                     <div class="link">
                         <a href="./productos.php">
                             <img src="icons/productos.png"></img>
@@ -78,11 +75,10 @@ include("Conexiones/conexion.php")
             </aside>
             <div class="page-content">
                 <div class="header">
-                    
                     <div class="global-stats">
                         <div class="stat-item">
                             <img src="./Certisaas _ Dashboard_files/logos/producto.png" alt="">
-                            <div>   
+                            <div>
                                 <h5>Productos vendidos</h5>
                                 <span>140 - Hoy</span>
                             </div>
