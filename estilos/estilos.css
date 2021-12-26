@@ -75,13 +75,11 @@ body{
 }
 /* css de la seccion de botones */
 .seccion_menu_control{
+    text-decoration: none;
+    color: black;
     text-align: center;
-    padding: 15px;
-    background: none;
-    border: none;
-    font-size: 16px;
+    padding: 10px;
     font-family: 'Open Sans', sans-serif;
-    cursor: pointer;
     transition: 0.3s linear;
     border-bottom: 1px solid var(--color-border);
 }
