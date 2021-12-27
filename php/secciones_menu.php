@@ -3,15 +3,15 @@
         <img src="imagenes/logo_pagina_principal.png" alt="Logo del menú">
     </div>
     <div class="container_botones_seccion_panel">
-        <a href="" class="seccion_menu_control">
+        <a href="?p=productos" class="seccion_menu_control">
             <div class="container__menu_control">
                 <i class="fas fa-angle-double-left"></i>
                 <span class="seccion_menu_control_text">
-                    Clientes
+                    Productos
                 </span>
             </div>
         </a>
-        <a href="" class="seccion_menu_control">
+        <a href="?p=comentarios" class="seccion_menu_control">
             <div class="container__menu_control">
                 <i class="fas fa-angle-double-left"></i>
                 <span class="seccion_menu_control_text">
