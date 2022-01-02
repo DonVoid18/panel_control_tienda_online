@@ -15,9 +15,15 @@
             </div>
             <div class="input_add_product">
                 <select name="" id="" class="input_object_add_product">
-                    <option value="">Gaming</option>
-                    <option value="">Televisores</option>
-                    <option value="">Celulares</option>
+                <?php
+                    // mostramos las categorías disponibles para no confudirse
+                    $consulta_categorias = "SELECT * FROM categoria";
+                    $resultado_categorias = $conn->query($consulta_categorias);
+                    while($row = $resultado_categorias->fetch_assoc()){?>
+                    <option value="<?php echo $row["id_categoria"]?>"><?php echo $row["nombre_categoria"]?></option>
+                <?php
+                    }
+                ?>
                 </select>
             </div>
             <div class="input_add_product">
@@ -27,13 +33,14 @@
                 <input type="number" class="input_object_add_product" placeholder="Descuento del producto (%)" min="0">
             </div>
             <div class="input_add_product">
+                <input type="text" class="input_object_add_product" placeholder="URL de la imagen" min="0">
+            </div>
+            <div class="input_add_product">
                 <button class="boton_add_product">Guardar producto</button>
                 <button class="boton_add_product">Limpiar Campos</button>
             </div>
-        </div>
-        <div class="container_input_imagen_product">
-            <img src="imagenes/producto-sin-imagen.png" alt="Imagen del producto">
-            <input type="file" class="input__image_product">
+            <div id="mensaje_confirmacion_add">
+            </div>
         </div>
     </div>
 </div>
@@ -49,8 +56,6 @@
                 <th>Descripción</th>
             </tr>
             <?php
-                // mostramos las categorías disponibles para no confudirse
-                $consulta_categorias = "SELECT * FROM categoria";
                 $resultado_categorias = $conn->query($consulta_categorias);
                 while($row = $resultado_categorias->fetch_assoc()){?>
                 <tr>
@@ -84,15 +89,15 @@
                 <th>Descripción</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
-                <th>Descuento</th>
-                <th>Fecha Registro</th>
+                <th>Desc(%)</th>
+                <th>Estado oferta</th>
                 <th>Opciones</th>
             </tr>
             <?php
-                $consulta_productos = "SELECT productos.*,oferta.descuento FROM productos INNER JOIN oferta on productos.id_producto = oferta.productos_id_producto";
+                $consulta_productos = "SELECT productos.*,oferta.descuento, oferta.estado_oferta FROM productos INNER JOIN oferta ON productos.id_producto = oferta.productos_id_producto ORDER BY productos.categoria_id_categoria,productos.id_producto ASC";
                 $resultado_productos = $conn->query($consulta_productos);
                 while($row = $resultado_productos->fetch_assoc()){?>
-            <tr>
+            <tr id="row_product_info_<?php echo $row["id_producto"]?>">
                 <td><?php echo $row["id_producto"]?></td>
                 <td><?php echo $row["categoria_id_categoria"]?></td>
                 <td class="container__table_imagen_producto">
@@ -102,13 +107,19 @@
                 <td><?php echo $row["descripcion"]?></td>
                 <td><?php echo $row["cantidad"]?></td>
                 <td><?php echo $row["precio"]?></td>
-                <td><?php echo $row["descuento"]?>%</td>
-                <td><?php echo $row["fecha_registro"]?></td>
+                <td><?php echo $row["descuento"]?></td>
+                <td><?php
+                    if($row["estado_oferta"]==="1"){
+                        echo "<span>Activo</span>";
+                    }else{
+                        echo "<span style='color:red;'>Desactivado</span>";
+                    }
+                ?></td>
                 <td class="container_table__botones">
-                    <button>
+                    <button name="delete_date" class="button__delete_date">
                         <i class="fas fa-trash"></i>
                     </button>
-                    <button>
+                    <button name="edit_date" class="button__edit_date">
                         <i class="fas fa-edit"></i>
                     </button>
                 </td>
@@ -119,3 +130,11 @@
         </table>
     </div>
 </div>
+
+<!-- agregamos las ventanas que vamos utilizar -->
+<?php
+    require_once "windows_modal/window_productos.php";
+    require_once "windows_modal/window_delete.php";
+?>
+<script src="<?php echo $link_base_root?>/javascript/ventana_modal_delete.js"></script>
+<script src="<?php echo $link_base_root?>/javascript/ventana_modal_productos.js"></script>

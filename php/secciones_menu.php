@@ -11,6 +11,14 @@
                 </span>
             </div>
         </a>
+        <a href="?p=fichas_tecnicas" class="seccion_menu_control">
+            <div class="container__menu_control">
+                <i class="fas fa-angle-double-left"></i>
+                <span class="seccion_menu_control_text">
+                    Fichas Técnicas
+                </span>
+            </div>
+        </a>
         <a href="?p=comentarios" class="seccion_menu_control">
             <div class="container__menu_control">
                 <i class="fas fa-angle-double-left"></i>

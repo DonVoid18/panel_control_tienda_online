@@ -1,0 +1,97 @@
+.container_ventana_delete{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ventana_delete{
+    width: 300px;
+    background-color: var(--color-primario);
+    padding: 10px;
+    border-radius: var(--border-radius-principal);
+}
+.text_delete{
+    text-align: center;
+}
+.container_buttons_ventana{
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+.button__confirm_delete, .button__confirm_edit{
+    background: #e63946;
+}
+.button__cancel_delete, .button__cancel_edit{
+    background: #03045e;
+}
+.container_buttons_ventana button{
+    font-weight: 700;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius-principal);
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.container_buttons_ventana button:hover{
+    transform: translateY(-2px);
+}
+
+
+/* ventana de editar productos */
+.container_ventana_edit{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ventana_edit{
+    width: 300px;
+    background-color: var(--color-primario);
+    padding: 10px;
+    border-radius: var(--border-radius-principal);
+}
+.container_edit_title{
+    text-align: center;
+    padding: 5px 0;
+}
+.container_edit_date__value{
+    padding: 5px 0;
+}
+.container_edit_date__value input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-principal);
+    font-family: 'Open Sans', sans-serif;
+}
+.container_edit_date__image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_edit_date__image img{
+    width: 30%;
+}
+.ventana_desactivada{
+    display: none;
+}
+#mensaje_modificacion_values_product{
+    padding: 5px 0;
+    text-align: center;
+}
+#mensaje_delete_value{
+    padding: 5px 0;
+    text-align: center;
+}
