@@ -1,0 +1,73 @@
+:root{
+    --color-border-input: #c2c2c2;
+    --border-radius: 0.3125rem;
+    --padding-general: 2.825rem;
+    --principal-color: #2b2d42;
+    --padding-total-comentario: 1rem;
+    --text-size-titulo-usuario: 2em;
+    --text-size-nombre-usuario: 1.3em;
+    --border-radius-comentario-usuario: 0.3125rem;
+    --color-borde-comentario: #dedede;
+}
+.container-comentario-usuario{
+    width: 100%;
+    padding: var(--padding-total-comentario);
+    border: 1px solid var(--color-borde-comentario);
+    border-radius: var(--border-radius-comentario-usuario);
+    margin: 0.3125rem 0;
+}
+.container-nombre-usuario-comentario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-mensaje-usuario-comentario{
+    padding: 10px 30px;
+}
+.container-fecha-usuario-comentario{
+    text-align: right;
+}
+/* css de las estrellas */
+
+
+
+
+/* css del container dejar un nuevo comentario */
+.container-nuevo-comentario-usuario{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0.0625rem solid var(--color-borde-comentario);
+    border-radius: var(--border-radius-comentario-usuario);
+    padding: 0.625rem;
+}
+.star_valoracion_producto_encendida{
+    color: #ffd000;
+}
+.star_valoracion_producto_apagada{
+    color: #ddd;
+}
+
+.container_preloader{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.container_preloader svg{
+    width: 100px;
+}
+.boton_eliminar_comentario button{
+    padding: 5px;
+    color: var(--color-tercero);
+    border: none;
+    cursor: pointer;
+    border: 1px solid var(--color-borde-comentario);
+    box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.103);
+    border-radius: var(--border-radius-comentario-usuario);
+    transition: 0.3s ease;
+}
+.boton_eliminar_comentario button:hover{
+    transform: translateY(-3px);
+    color: red;
+    border: 1px solid red;
+}

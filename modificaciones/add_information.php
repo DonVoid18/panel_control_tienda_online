@@ -17,5 +17,14 @@
             echo "No se ha añadido el producto";
         }
     }
+    if($values[count($values)-1] === "ficha_tecnica"){
+        $insertar_ficha = "INSERT INTO ficha_tecnica (productos_id_producto,ancho,alto,peso,color) VALUES ('$values[0]','$values[1]','$values[2]','$values[3]','$values[4]')";
+        $respuesta_insertar_ficha = $conn->query($insertar_ficha);
+        if($respuesta_insertar_ficha){
+            echo "La ficha técnica a sido agregada correctamente.";
+        }else{
+            echo "No se a podido agregar la ficha técnica.";
+        }
+    }
     $conn->close();
 ?>

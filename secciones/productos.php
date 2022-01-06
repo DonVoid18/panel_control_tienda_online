@@ -136,5 +136,6 @@
     require_once "windows_modal/window_productos.php";
     require_once "windows_modal/window_delete.php";
 ?>
-<script src="<?php echo $link_base_root?>/javascript/ventana_modal_delete.js"></script>
-<script src="<?php echo $link_base_root?>/javascript/ventana_modal_productos.js"></script>
+<script src="<?php echo $link_base_root?>/javascript/productos/ventana_modal_delete.js"></script>
+<script src="<?php echo $link_base_root?>/javascript/productos/ventana_modal_productos.js"></script>
+<script src="<?php echo $link_base_root?>/javascript/productos/add_information.js"></script>

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo $link_base_root?>/estilos/estilos.css">
     <link rel="stylesheet" href="<?php echo $link_base_root?>/estilos/estilo_ventana_modal.css">
     <link rel="stylesheet" href="<?php echo $link_base_root?>/estilos/main_estilos.css">
+    <link rel="stylesheet" href="<?php echo $link_base_root?>/estilos/estilos_comentarios.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/71a4b48035.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

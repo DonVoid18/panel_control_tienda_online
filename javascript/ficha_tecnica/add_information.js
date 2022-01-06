@@ -1,8 +1,8 @@
 const inputs_info = document.querySelectorAll(".container_inputs_new_products .input_add_product");
 
 // eventos
-    inputs_info[7].children[0].addEventListener("click",add_information);
-    inputs_info[7].children[1].addEventListener("click",clean_inputs);
+    inputs_info[inputs_info.length-1].children[0].addEventListener("click",add_information);
+    inputs_info[inputs_info.length-1].children[1].addEventListener("click",clean_inputs);
 // funciones
 function add_information(){
     let info_enviar = true;
@@ -30,7 +30,7 @@ function add_information(){
             }
         }
         // agregamos a que tabla vamos a ingresar la información
-        datos[datos.length] = "productos";
+        datos[datos.length] = "ficha_tecnica";
         $.ajax({
             data: {'array': JSON.stringify(datos)},
             // nesitamos hacerlo dinámico para cualquier persona
